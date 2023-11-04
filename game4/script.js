@@ -22,7 +22,7 @@ class Explosion {
         this.timer = 0; 
         this.angle = Math.random() * 6.2; 
         this.sound = new Audio(); 
-        this.sound.src = 'boom.wav'; 
+        this.sound.src = './sound-effects/boom.wav'; 
     }
     update(){
         if(this.frame === 0) this.sound.play(); 
