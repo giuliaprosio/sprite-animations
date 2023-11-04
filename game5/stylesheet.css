@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url("background1/layer-4.png"),url("background1/layer-3.png"),url("background1/layer-2.png"), url("background1/layer-1.png");
+   }
+
+#button {
+    border: 3px solid black;
+    text-align: center;
+    font-size: 16px;
+}
+
+video {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#container {
+    border: 3px solid black; 
+    position: absolute; 
+    width: 800px; 
+    height: 500px;
+    transform: translate(-50%, -50%);
+    top: 50%; 
+    left: 50%; 
+    font-size: 25px;
+}

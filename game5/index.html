@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Playing animations on trigger</title>
-        <link rel="stylesheet" href="style.css"/>
+        <title>Game Login</title>
+        <link rel="stylesheet" href="stylesheet.css"/>
     </head>
     <body>
-        <canvas id="collisionCanvas"></canvas>
-        <canvas id="canvas1"></canvas>
-            
-        <script src="script.js"></script>
-      
-
+        <h1>Point and shoot game</h1>
+        <p class="p-welcome">The goal of the game is simple: shoot the birds!</p>
+        <button type="button" id="button" onclick="window.location.href = 'game.html'">Let's play!</button>
+        <div id="container">
+            <video preload="auto" autoplay loop muted = "muted" volume ="1">
+                <source src="videos/video.mp4" type="video/mp4">
+            </video> 
+            <canvas id="canvas1"></canvas>
+        </div>
     </body>
 </html>

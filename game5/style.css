@@ -18,3 +18,8 @@ canvas {
     opacity: 0;
     /*background: linear-gradient(to top, red, pink, lightblue);*/
 }
+
+#div {
+    width: 800px; 
+    height: 800px;
+}

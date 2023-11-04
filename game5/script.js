@@ -3,6 +3,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth; 
 canvas.height = window.innerHeight;
 
+const div = document.getElementById('div'); 
+
 const collisionCanvas = document.getElementById('collisionCanvas'); 
 const collisionCtx = collisionCanvas.getContext('2d'); 
 collisionCanvas.width = window.innerWidth; 
@@ -117,10 +119,8 @@ let gameSpeed = 5;
 class Particle {
     constructor(x,y,size,color){
         this.size = size; 
-
         this.x = x + this.size/2; 
         this.y = y + this.size/3; 
-        
         this.radius = Math.random() * this.size / 10; 
         this.maxRadius = Math.random()*20 + 35; 
         this.markedForDeletion = false;
@@ -130,15 +130,18 @@ class Particle {
     }
     update(){
         this.x += this.speedX; 
-        this.radius += 0.2; 
-        if(this.radius > this.maxRadius) this.markedForDeletion = true; 
+        this.radius += 0.5; 
+        if(this.radius > this.maxRadius-5) this.markedForDeletion = true; 
 
     }
     draw(){
+        ctx.save();
+        ctx.globalAlpha = 1- this.radius/this.maxRadius; 
         ctx.beginPath(); 
         ctx.fillStyle = this.color;  
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
         ctx.fill();  
+        ctx.restore();
     }
 }
 
@@ -198,6 +201,17 @@ function drawGameOver(){
     ctx.fillStyle = 'white'; 
     ctx.fillText('GAME OVER, YOUR SCORE IS: '+ score, canvas.width/2 +5, canvas.height/2 +5); 
 
+    let btn = div.appendChild(document.createElement("button"));
+    btn.style.position = "absolute"; 
+    btn.style.left = "50%";
+    btn.style.top = "55%";
+    btn.style.border = "3px solid black";
+    btn.style.width = "80px";
+    btn.style.fontWeight = "900";
+    btn.innerText = "back to menu"; //to add button on click
+
+    btn.setAttribute("onclick", "location.href='index.html'");
+    //btn.onclick = "location.href='index.html'";
 }
 
 window.addEventListener('click', function(e){
