@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient(to top, red, pink, lightblue);
+    /*background: linear-gradient(to top, red, pink, lightblue);*/
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    
 }
 
 canvas {
