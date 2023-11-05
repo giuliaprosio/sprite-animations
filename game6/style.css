@@ -17,3 +17,7 @@
 #player {
    display: none;
 }
+
+#player_flipped {
+    display: none;
+ }

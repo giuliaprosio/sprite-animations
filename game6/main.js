@@ -16,7 +16,8 @@ window.addEventListener('load', function(){
             this.input= new InputHandler(); 
         }
         update(){
-            this.player.update(this.input.keys); 
+            this.player.update(this.input.keys);
+            // this.input.keys = [];
         }
         draw(context){
             this.player.draw(context); 
@@ -29,7 +30,7 @@ window.addEventListener('load', function(){
     function animate(){
         ctx.clearRect(0,0,canvas.width, canvas.height);
         game.draw(ctx); 
-        game.update(); 
+        game.update();
         requestAnimationFrame(animate); 
     }
     animate(); 
