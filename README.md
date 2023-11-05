@@ -1,15 +1,13 @@
 # Game development in JS 
 
-## Game 1
-Simple project with vanilla JS for sprite animation techniques
+## Usage
+1. Clone the repository
+2. Open from terminal live server . or any alternative you have or prefer
 
-## Game 2
-Project about parallel backgrounds and animations with JS
-
-## Game 3
-Enemies and movement patterns - 4 different subprojects combining different possibilities 
-
-### Game 4
-Collision detection algorithms between rectangles and between circles. Combining audio and animation 
+## Project 1, 2, 3, 4
+These first four projects aim to practice and play around with vanilla JS for sprite animation techniques. They are focusing each on parallax background movements and animations, enemies and movement patterns, and collision detection algorithm based on mouse events. 
 
 ### Game 5 
+A little game, I am working on adding features such as different backgrounds, levels and so on. 
+The tipology of the game is the same flapping bird or similar, simply shoot as many birds as you can before they are able to cross the screen! 
+
