@@ -1,18 +1,12 @@
+
 export class Player{
     constructor(game){
         this.game = game; 
-
-        //this 2 lines for dynamic link
-        //this.image = new Image(); 
-        //this.image.src = "./images/player.png"; 
-
-        //player - to be sure it's loaded link the img to html
-        //how big is a frame? window.width/12
         this.width = 100;
         this.height = 91.3;  
+        this.sizeModifier = 1.2;
         this.x = 0;
-        this.y = this.game.height - this.height; 
-        //taking image from html
+        this.y = this.game.height - this.height - 100;
         this.image = document.getElementById("player"); 
         this.flipped_image = document.getElementById("player_flipped"); 
         this.frame = 0; 
@@ -31,7 +25,7 @@ export class Player{
         }
         if(input.includes('ArrowRight')) {
             this.mirroring = false;
-            this.x++; 
+            this.x+=2; 
             if(this.frame < 6){
                 this.frame++; 
                 this.sy = 273.9;
@@ -39,7 +33,7 @@ export class Player{
                 this.frame = 0;
             }
             if(input.includes('ArrowDown')){
-                this.x = this.x +2;
+                this.x = this.x +4;
                 this.sy = 547.8; 
             }
             if(input.includes('ArrowUp')){
@@ -51,7 +45,7 @@ export class Player{
         }
         else if (input.includes('ArrowLeft')){
             this.mirroring = true; 
-            this.x--;
+            this.x -=2;
             if(this.frame > 0){
                 this.frame--; 
                 this.sy = 273.9;
@@ -59,7 +53,7 @@ export class Player{
                 this.frame = 5;
             }
             if(input.includes('ArrowDown')){
-                this.x -= 2;
+                this.x -= 4;
                 this.sy = 547.8; 
             
             }
