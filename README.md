@@ -11,3 +11,7 @@ These first four projects aim to practice and play around with vanilla JS for sp
 A little game, I am working on adding features such as different backgrounds, levels and so on. 
 The tipology of the game is the same flapping bird or similar, simply shoot as many birds as you can before they are able to cross the screen! 
 
+Here a little preview oft the game!
+
+https://github.com/giuliaprosio/sprite-animations/assets/82225149/cf9047bb-da13-48b3-9820-b48fc509c764
+
