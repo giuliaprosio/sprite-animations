@@ -1,3 +1,5 @@
+
+
 export class Raven {
     constructor(game){
         this.frameX = 0; 
@@ -9,18 +11,18 @@ export class Raven {
 
         this.spriteWidth = 271; 
         this.spriteHeight = 175; 
-        this.sizeModifier = Math.random()*1.2 + 0.5;
+        this.sizeModifier = Math.random()*0.8 + 0.5;
         this.width = this.spriteWidth*this.sizeModifier;
         this.height = this.spriteHeight*this.sizeModifier; 
 
         this.x = this.game.width;
-        this.y = this.y = Math.random()*(this.game.height -this.height); ;
+        this.y = this.y = Math.random()*(this.game.height - this.height); ;
         this.speedX = 2; 
         this.speedY = 0;
         this.maxFrame = 5; 
 
         this.directionX = Math.random()*5 +3;
-        this.directionY = Math.random()*5 -2.5; 
+        this.directionY = Math.random()*9 -3.5; 
 
         this.image = document.getElementById('raven'); 
 
@@ -29,7 +31,7 @@ export class Raven {
 
     update(deltatime){
         if(this.y <= 0) console.log(this.y)
-        if(this.y < 0 || this.y > this.game.height -this.height){
+        if(this.y < 0 || this.y > this.game.height - this.height){
             this.directionY = this.directionY * -1;
         }
         this.x -= this.directionX;
@@ -45,10 +47,7 @@ export class Raven {
         }else{
             this.frameTimer ++; 
         }
-        this.timeSinceFlap = 0;
-        //particles.push(new Particle(this.x, this.y, this.width, this.color)); 
-        
-       // if(this.x < 0 - this.width) gameOver = true; 
+
     }
 
     draw(context){

@@ -8,14 +8,20 @@
         <link rel="stylesheet" href="stylesheet.css"/>
     </head>
     <body>
-        <h1>Point and shoot game</h1>
-        <p class="p-welcome">The goal of the game is simple: shoot the birds!</p>
-        <button type="button" id="button" onclick="window.location.href = 'game.html'">Let's play!</button>
-        <div id="container">
+        <div id="right">
+            <h1>Point and shoot game</h1>
+            <p class="p-welcome">The goal of the game is simple: shoot the birds!</p>
+            <button type="button" id="button" onclick="window.location.href = 'game.html'">Let's play!</button>
+            <div id="container">
             <video preload="auto" autoplay loop muted = "muted" volume ="1">
                 <source src="videos/trailer.mp4" type="video/mp4">
             </video> 
             <canvas id="canvas1"></canvas>
         </div>
+        </div>
+        <div id="left">
+            <h1>Collision detection game</h1>
+        </div>
+        
     </body>
 </html>
